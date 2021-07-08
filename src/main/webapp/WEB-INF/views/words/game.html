@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Game</title>
+</head>
+<body>
+
+<p th:text="${word.getRu()}">VALUE</p>
+
+<form th:method="POST" th:action="@{/words/game}" th:object="${word}">
+  <label for="tryEn">Enter EN </label>
+  <input type="text" th:field="*{tryEn}" id="tryEn"/>
+
+  <input type="hidden" th:field="*{en}" id="en"/>
+  <br/>
+
+  <input type="submit" value="Go!"/>
+</form>
+
+</body>
+</html>

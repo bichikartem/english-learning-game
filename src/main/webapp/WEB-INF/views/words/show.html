@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Word</title>
+</head>
+<body>
+<p th:text="${word.getEn()}">VALUE</p>
+<p th:text="${word.getRu()}">VALUE</p>
+<p th:text="${word.getId()}">VALUE</p>
+
+<a th:href="@{/words/{id}/edit(id=${word.getId()})}">Edit</a>
+
+<form th:method="DELETE" th:action="@{/words/{id}(id=${word.getId()})}"/>
+    <input type="submit" value="Delete"/>
+</body>
+</html>

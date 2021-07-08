@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All Words</title>
+</head>
+<body>
+
+<div th:each="word : ${words}">
+    <a th:href="@{/words/{id}(id=${word.getId()})}" th:text="${word.getEn()}">word</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/words/new">Create new Word</a>
+
+</body>
+</html>

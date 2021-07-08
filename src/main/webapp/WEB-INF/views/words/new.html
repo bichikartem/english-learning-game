@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Word</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/words}" th:object="${word}">
+
+    <label for="en">Enter en </label>
+    <input type="text" th:field="*{en}" id="en"/>
+
+    <label for="ru">Enter ru </label>
+    <input type="text" th:field="*{ru}" id="ru"/>
+
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>
